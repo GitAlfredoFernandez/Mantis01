@@ -140,7 +140,8 @@ audio_play_sound(snd_win,0,false);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Collision
+            <string>/// Collision.
+/// PRUEBA GIT
 </string>
           </argument>
         </arguments>
