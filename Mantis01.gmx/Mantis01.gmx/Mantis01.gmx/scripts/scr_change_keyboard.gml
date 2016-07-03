@@ -1,5 +1,5 @@
 /// Cambia el keyboard
-
+/// Cambio online
 /// TECLADO ORIGINAL:
 /*    
     var right_key = keyboard_check(vk_right);
