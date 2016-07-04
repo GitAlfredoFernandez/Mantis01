@@ -54,7 +54,7 @@
     <script>scripts\scr_encryp_decryp.gml</script>
   </scripts>
   <objects name="objects">
-    <object>objects\obj_Player</object>
+    <object>objects\obj_player</object>
     <object>objects\obj_wall</object>
     <object>objects\obj_home</object>
     <object>objects\obj_splash</object>

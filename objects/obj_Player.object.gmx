@@ -89,7 +89,17 @@ alarm[0] = room_speed*TIEMPO_ALARMA;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_move_player();
+            <string>if (player_en_puerta == 0)
+{
+    scr_move_player();
+}
+else
+{
+    // Cuando llega a la puerta se DETIENE
+    image_speed = 0;    // Detiene animación
+    image_index = 0;    // Pone el primer sprite de la serie (PJ parado)
+    sprite_index = spr_pj_up;
+}
 
 </string>
           </argument>
@@ -159,9 +169,9 @@ player_en_puerta = 1;
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
   <PhysicsShapePoints>
-    <point>0,20</point>
-    <point>32,20</point>
-    <point>32,48</point>
-    <point>0,48</point>
+    <point>8,20</point>
+    <point>24,20</point>
+    <point>24,48</point>
+    <point>8,48</point>
   </PhysicsShapePoints>
 </object>

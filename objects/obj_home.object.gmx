@@ -28,7 +28,35 @@
             <string>/// CREATE HOME
 phy_fixed_rotation = true 
 spd_img = .2; 
-player_en_puerta = 0;
+cerrando_puerta = 0;
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Control Alarma y Cambio de Mapa (next)
+
+    if room_exists(room_next(room)) room_goto_next(); 
+    audio_stop_all();
+    audio_play_sound(snd_win,0,false);
 </string>
           </argument>
         </arguments>
@@ -52,17 +80,30 @@ player_en_puerta = 0;
           <argument>
             <kind>1</kind>
             <string>/// STEP event de la puerta
-if player_en_puerta = 1 then
+if (image_index&gt;2)
 {
-    if room_exists(room_next(room)) room_goto_next(); 
-    audio_stop_all();
-    audio_play_sound(snd_win,0,false);
+    image_speed = spd_img;
+    image_index = 3;
+}
+if obj_player.player_en_puerta = 1 then
+{
+
+    if (cerrando_puerta == 0)
+    {
+        //Animo la puerta
+        image_speed = spd_img;
+        cerrando_puerta = 1;
+        alarm[0] = 30;
+
+    }
 }
 else
 {
     //Sino esta en puerta la puerta esta cerrada.
-    
+    image_speed = spd_img;
+    image_index = 0;
 }
+
 </string>
           </argument>
         </arguments>
@@ -81,9 +122,9 @@ else
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
   <PhysicsShapePoints>
-    <point>24,12</point>
-    <point>72,12</point>
-    <point>72,64</point>
-    <point>24,64</point>
+    <point>36,56</point>
+    <point>60,56</point>
+    <point>60,64</point>
+    <point>36,64</point>
   </PhysicsShapePoints>
 </object>

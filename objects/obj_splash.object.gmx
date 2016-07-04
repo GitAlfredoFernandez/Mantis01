@@ -25,9 +25,22 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Inicia Alarma
+            <string>///Inicia Splash
+
+//Inicia alarma
 alarm[0] = room_speed*4;  // 4 segundos y despues cambia al juego
+
+//Inicia sonido de carga
 audio_play_sound(snd_intro,0,false);
+
+//Centra background
+var bw = background_get_width(bck_splash);
+var bh = background_get_height(bck_splash);
+var sw = room_width;
+var sh = room_height;
+background_x[0]=(sw-bw)/2;
+background_y[0]=(sh-bh)/2;
+
 
 </string>
           </argument>
