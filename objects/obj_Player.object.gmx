@@ -29,11 +29,12 @@
 randomize();                            // randomize the seed of the game - no se que mierda es pero por las dudas lo pongo :D
 phy_fixed_rotation = true               // Evita que el objeto rote sobre su eje al colicionar
 numero_random = 1;                      // Genera un numero al azar entre 0 y 23 para usar en el array opcion
-spd = PLAYERSPEED;                               // Velocidad el PJ
+spd = PLAYERSPEED;                      // Velocidad el PJ
 spd_img = .2;                           // Velocidad de sprite
 image_speed = 0;                        // Arranca con el PJ parado
 alarm[0] = room_speed*TIEMPO_ALARMA;    // Setea tiempo de alarma para cambio de teclado 
 player_en_puerta = 0;                   // Si 1 player gano y se activa la puerta
+
 </string>
           </argument>
         </arguments>
@@ -92,6 +93,7 @@ alarm[0] = room_speed*TIEMPO_ALARMA;
             <string>if (player_en_puerta == 0)
 {
     scr_move_player();
+    obj_timer.player_puntos +=1;
 }
 else
 {
@@ -151,6 +153,35 @@ player_en_puerta = 1;
             <kind>1</kind>
             <string>/// Collision.
 /// PRUEBA GIT
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Dibuja los puntos
+
+// Primero se dibuja a si mismo para mostrar el PJ caminando
+draw_self();
+
+// Ahora dibuja los puntos del PJ al final de la pantalla
+scr_timer();
 </string>
           </argument>
         </arguments>
