@@ -75,6 +75,7 @@
     <script>scripts\scr_move_player.gml</script>
     <script>scripts\scr_change_keyboard.gml</script>
     <script>scripts\scr_encryp_decryp.gml</script>
+    <script>scripts\scr_timer.gml</script>
     <scripts name="EasyMenu Scripts">
       <script>scripts\em_init.gml</script>
       <script>scripts\em_step.gml</script>
@@ -97,6 +98,7 @@
     <object>objects\obj_splash</object>
     <object>objects\obj_menu</object>
     <object>objects\obj_next_level</object>
+    <object>objects\obj_timer</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_splash</room>
@@ -104,6 +106,9 @@
     <room>rooms\rm_one</room>
     <room>rooms\rm_win</room>
   </rooms>
+  <constants number="1">
+    <constant name="PUNTOS">0</constant>
+  </constants>
   <help>
     <rtf>help.rtf</rtf>
   </help>

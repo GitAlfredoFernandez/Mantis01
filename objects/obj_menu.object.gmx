@@ -35,7 +35,7 @@ background_x[0]=(sw-bw)/2;
 background_y[0]=(sh-bh)/2;
 
 em_init(
-    3,
+    2,
     fnt_menu,
     32,
     '&gt;',
