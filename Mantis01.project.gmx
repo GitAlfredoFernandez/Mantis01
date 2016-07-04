@@ -14,12 +14,12 @@
     <sound>sound\snd_win</sound>
   </sounds>
   <sprites name="sprites">
-    <sprite>sprites\spr_wall_up_down</sprite>
-    <sprite>sprites\spr_home</sprite>
-    <sprite>sprites\spr_Mantis</sprite>
-    <sprite>sprites\spr_wall_left_right</sprite>
     <sprite>sprites\spr_wall</sprite>
-    <sprite>sprites\spr_wall_rojo</sprite>
+    <sprite>sprites\spr_pj_down</sprite>
+    <sprite>sprites\spr_pj_left</sprite>
+    <sprite>sprites\spr_pj_right</sprite>
+    <sprite>sprites\spr_pj_up</sprite>
+    <sprite>sprites\spr_door</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bck_lvl</background>
@@ -45,6 +45,7 @@
     <background>background\Tile14</background>
     <background>background\Tile15</background>
     <background>background\tile16</background>
+    <background>background\bck_madera</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -55,7 +56,6 @@
   <objects name="objects">
     <object>objects\obj_Player</object>
     <object>objects\obj_wall</object>
-    <object>objects\obj_wall_rojo</object>
     <object>objects\obj_home</object>
     <object>objects\obj_splash</object>
     <object>objects\obj_win_message</object>

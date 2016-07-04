@@ -16,7 +16,7 @@ else
 if (right_key)
 {
     phy_position_x += spd;
-    //sprite_index = spr_player_right;
+    sprite_index = spr_pj_right;
     image_speed = spd_img;
 }
 
@@ -24,7 +24,7 @@ if (right_key)
 if (up_key)
 {
     phy_position_y -= spd;
-    //sprite_index = spr_player_up;
+    sprite_index = spr_pj_up;
     image_speed = spd_img;
 }
 
@@ -32,7 +32,7 @@ if (up_key)
 if (left_key)
 {
     phy_position_x -= spd;
-    //sprite_index = spr_player_left;
+    sprite_index = spr_pj_left;
     image_speed = spd_img;
 }
 
@@ -40,7 +40,7 @@ if (left_key)
 if (down_key)
 {
     phy_position_y += spd;
-    //sprite_index = spr_player_down;
+    sprite_index = spr_pj_down;
     image_speed = spd_img;
 }
 
