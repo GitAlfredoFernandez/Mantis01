@@ -1,5 +1,5 @@
 // Move Player
-
+// Comentario para numero
 if (DEBUG = 1) then
 {
     right_key = keyboard_check(vk_right);
